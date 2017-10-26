@@ -1,14 +1,19 @@
 <ion-menu [content]="content">
   <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="primary-dark">
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <button color="primary-pale" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon [name]="p.icon" item-left></ion-icon>
         {{p.title}}
+      </button>
+      <button color="primary-pale" menuClode ion-item (click)="openReverse()">
+        <ion-icon name="restaurant" item-left></ion-icon>
+        Reserve Table
       </button>
     </ion-list>
   </ion-content>
